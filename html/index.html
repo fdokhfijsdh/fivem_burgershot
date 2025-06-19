@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Burgershot Order System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="tablet">
+        <div id="tablet-content">
+            <header>
+                <div class="header-left">
+                    <h1>🍔 BurgerShot</h1>
+                </div>
+                <div class="header-center">
+                    <div id="datetime"></div>
+                </div>
+                <div class="header-right">
+                    <button id="exit-button">Schließen</button>
+                </div>
+            </header>
+
+            <div class="tabs">
+                <button class="tab-button active" data-tab="boxen">Boxen</button>
+                <button class="tab-button" data-tab="burger">Burger</button>
+                <button class="tab-button" data-tab="beilagen">Beilagen</button>
+                <button class="tab-button" data-tab="getraenke">Getränke</button>
+                <button class="tab-button" data-tab="dessert">Dessert</button>
+            </div>
+
+            <div class="content">
+                <div class="menu-container">
+                    <div class="menu-section" id="tab-boxen">
+                        <h2>Boxen</h2>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="box-classic">
+                                <h3>Classic Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - BBQ Burger</li>
+                                        <li>🍟 - Meteorite Fries (Pommes mit schimmerndem, knusprigem Paprika-Crunch)</li>
+                                        <li>🥤 - Starry Lemonade (mit glitzernden, essbaren Sternen)</li>
+                                        <li>🍦 - Nebula Swirl Eis</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="box-veggie">
+                                <h3>Veggie Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - Veggie Burger (mit Guacamole und Planet Hope Sauce)</li>
+                                        <li>🍟 - Stellar Sweet Potato Fries (mit kosmischem Zimt-Zucker-Topping)</li>
+                                        <li>🧋 - Galaxy Green Smoothie (mit Spirulina und Leinsamen)</li>
+                                        <li>🍦 - Galaxy Berry Eis (mit glitzernden Sternen)</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="box-fusion">
+                                <h3>Fusion Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - Fusion Burger (Wagyu-Rind & Lachs, Wasabi-Mayonnaise)</li>
+                                        <li>🫓 - Veggie Slaw (mit schwarzen Sesamkörnern und einem Hauch von Limette)</li>
+                                        <li>🧋 - Fizz (ein sprudelndes Getränk mit frischen Beeren und einem schimmernden Glitzer-Effekt)</li>
+                                        <li>🍦 - Space Cookie Dough Eis</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="box-bbq">
+                                <h3>BBQ Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - Brisket Burger (mit Barbecue-Sauce und Cranberry)</li>
+                                        <li>🌽 - Corn Dogs (gegrillter Maiskolben mit schimmernder Butter und Gewürzen)</li>
+                                        <li>🥤 - Supernova Cola (mit einem Hauch von Limette und sprudelndem Koffein)</li>
+                                        <li>🍦 - Supernova Citrus Eis</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="box-sweet">
+                                <h3>Sweet Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - Starry Night Beef Burger (mit Blauschimmelkäse und Trüffel-Mayo)</li>
+                                        <li>🍟 - Meteorite Onion Rings (mit glitzerndem Zwiebelteig)</li>
+                                        <li>🥤 - Milkshake (mit essbarem Glitzer, Schokoladensirup und einer Galaxie-Garnierung)</li>
+                                        <li>🍦 - Black Hole Chocolate Eis</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="box-spicy">
+                                <h3>Spicy Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - Spicy Chicken Burger (mit Chili-Limetten-Marinade und Sriracha Mayo)</li>
+                                        <li>🥟 - Jalapeño Poppers (mit Käse gefüllte Jalapeños im knusprigen Teig)</li>
+                                        <li>🧋 - Fire Punch (ein scharfer, sprudelnder Drink mit Ananas und Chili)</li>
+                                        <li>🍦 - Stardust Crunch Eis (mit Karamell und schimmernden Zuckerkristallen)</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="box-vegan">
+                                <h3>Vegan Box</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>🍔 - Vegan Burger (mit Linsen-Patty, Avocado und Planet Hope Sauce)</li>
+                                        <li>🥗 - Galaxy Salad (mit wilden Blattsalaten, schwarzen Beeren und einem glitzernden Dressing)</li>
+                                        <li>🥤 - Detox Water (mit Gurke, Minze und schimmernden Sternen)</li>
+                                        <li>🍦 - Nebula Swirl Eis (vegan)</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="tab-burger" style="display:none;">
+                        <h2>Burger</h2>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="burger-bbq">
+                                <h3>BBQ Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Saftiges Rindfleisch</li>
+                                        <li>Barbecue-Sauce</li>
+                                        <li>Karamellisierte Zwiebeln</li>
+                                        <li>Käse</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+                            
+                            <div class="menu-item" data-id="burger-veggie">
+                                <h3>Veggie Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Vegetarische Patties</li>
+                                        <li>Frischer Salat</li>
+                                        <li>Tomaten</li>
+                                        <li>Vegane Mayo</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="burger-spicychicken">
+                                <h3>Spicy Chicken Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knuspriges Hähnchen</li>
+                                        <li>Würzige Sauce</li>
+                                        <li>Salat</li>
+                                        <li>Tomaten</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="burger-starrynightbeef">
+                                <h3>Starry Night Beef Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Saftiges Rindfleisch</li>
+                                        <li>Glitzernde Sauce</li>
+                                        <li>Frischer Salat</li>
+                                        <li>Tomaten</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="burger-fusion">
+                                <h3>Fusion Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Saftiges Rindfleisch</li>
+                                        <li>Teriyaki-Sauce</li>
+                                        <li>Wasabi-Mayo</li>
+                                        <li>Sesam-Brötchen</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="burger-meteoritemushroom">
+                                <h3>Meteorite Mushroom Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Saftiges Rindfleisch</li>
+                                        <li>Gegrillte Champignons</li>
+                                        <li>BBQ-Sauce</li>
+                                        <li>Schmelzkäse</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="burger-brisket">
+                                <h3>Brisket Burger</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Rindfleisch-Brisket</li>
+                                        <li>BBQ-Sauce</li>
+                                        <li>Coleslaw</li>
+                                        <li>Cheddar-Käse</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="tab-beilagen" style="display:none;">
+                        <h2>Beilagen</h2>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="side-meteoritefries">
+                                <h3>Meteorite Fries</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Pommes</li>
+                                        <li>Mit schimmerndem Paprika-Crunch</li>
+                                        <li>Hausgemachte Sauce</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="side-stellarsweetpotatofries">
+                                <h3>Stellar Sweet Potato Fries</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Süßkartoffelpommes</li>
+                                        <li>Mit kosmischem Zimt-Zucker-Topping</li>
+                                        <li>Hausgemachte Sauce</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="side-veggieslaw">
+                                <h3>Veggie Slaw</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Pommes</li>
+                                        <li>Mit schimmerndem Paprika-Crunch</li>
+                                        <li>Hausgemachte Sauce</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="side-corndogs">
+                                <h3>Corn Dogs</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Corn Dogs</li>
+                                        <li>Mit schimmerndem Teig</li>
+                                        <li>Serviert mit Dip</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="side-meteoriteonionrings">
+                                <h3>Meteorite Onion Rings</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Zwiebelringe</li>
+                                        <li>Mit schimmerndem Zwiebelteig</li>
+                                        <li>Hausgemachte Sauce</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="side-jalapenopoppers">
+                                <h3>Jalapeño Poppers</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Jalapeños</li>
+                                        <li>Mit Käse gefüllt</li>
+                                        <li>Serviert mit Dip</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="side-galaxysalad">
+                                <h3>Galaxy Salad</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Frischer Blattsalat</li>
+                                        <li>Mit schwarzen Beeren</li>
+                                        <li>Glitzerndes Dressing</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="tab-getraenke" style="display:none;">
+                        <h2>Getränke</h2>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="drink-lemonade">
+                                <h3>Lemonade</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischende Limonade</li>
+                                        <li>Mit Zitrone</li>
+                                        <li>Sprudelnd</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-icedtea">
+                                <h3>Iced Tea</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischender Eistee</li>
+                                        <li>Mit Zitrone</li>
+                                        <li>Gesüßt</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-fizz">
+                                <h3>Fizz</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Sprudelndes Getränk</li>
+                                        <li>Mit Zitrone</li>
+                                        <li>Erfrischend</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-smoothie">
+                                <h3>Smoothie</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Fruchtiger Smoothie</li>
+                                        <li>Mit Banane</li>
+                                        <li>Joghurt</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-grapepunch">
+                                <h3>Grape Punch</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischender Traubensaft</li>
+                                        <li>Mit Minze</li>
+                                        <li>Sprudelnd</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-coldbrew">
+                                <h3>Cold Brew</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Kaltes Kaffeegetränk</li>
+                                        <li>Mit Vanille</li>
+                                        <li>Leicht gesüßt</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-citruscooler">
+                                <h3>Citrus Cooler</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischendes Citrusgetränk</li>
+                                        <li>Mit Limette</li>
+                                        <li>Sprudelnd</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-bluelemonade">
+                                <h3>Blue Lemonade</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischende Limonade</li>
+                                        <li>Mit Zitrone</li>
+                                        <li>Sprudelnd</li>
+                                        <li>Blaue Lebensmittelfarbe</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-gingerale">
+                                <h3>Ginger Ale</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischendes Ingwergetränk</li>
+                                        <li>Mit Zitrone</li>
+                                        <li>Sprudelnd</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-chocolate">
+                                <h3>Choco Latte</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Heiße Schokolade</li>
+                                        <li>Mit Sahne</li>
+                                        <li>Schokoladensirup</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-mojito">
+                                <h3>Mojito</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Erfrischender Cocktail</li>
+                                        <li>Minze</li>
+                                        <li>Zitrone</li>
+                                        <li>Rum</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="drink-infusedwater">
+                                <h3>Infused Water</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Wasser mit Früchten</li>
+                                        <li>Erfrischend</li>
+                                        <li>Gesund</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section" id="tab-dessert" style="display:none;">
+                        <h2>Dessert</h2>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="dessert-nebulaswirl">
+                                <h3>Nebula Swirl</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Fruchtiges Eis</li>
+                                        <li>Mit Sahne</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-galacticmint">
+                                <h3>Galactic Mint</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Fruchtiges Eis</li>
+                                        <li>Mit Sahne</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-stardustcrunch">
+                                <h3>Stardust Crunch</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Knusprige Kekse</li>
+                                        <li>Mit Schokoladensauce</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-galaxyberry">
+                                <h3>Galaxy Berry</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Fruchtiges Sorbet</li>
+                                        <li>Mit Beeren</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-blackholechocolate">
+                                <h3>Black Hole Chocolate</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Schokoladeneis</li>
+                                        <li>Mit Schokoladensauce</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-supernovacitrus">
+                                <h3>Supernova Citrus</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Fruchtiges Sorbet</li>
+                                        <li>Mit Zitrusfrüchten</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-spacecookiedough">
+                                <h3>Space Cookie Dough</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Cookie Dough Eis</li>
+                                        <li>Mit Schokoladenstückchen</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+
+                            <div class="menu-item" data-id="dessert-bluemooneclipse">
+                                <h3>Blue Moon Eclipse</h3>
+                                <div class="menuContent">
+                                    <ul>
+                                        <li>Schokoladeneis</li>
+                                        <li>Mit Blaubeeren</li>
+                                        <li>Glitzernde Streusel</li>
+                                    </ul>
+                                </div>
+                                <button class="order-btn">Zur Bestellung hinzufügen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="current-order">
+                    <h2>Bestellungsinhalt</h2>
+                    <div id="order-items"></div>
+                    <div id="order-total">Gesamt: $0.00</div>
+                    <button id="clear-order">Bestellung leeren</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
